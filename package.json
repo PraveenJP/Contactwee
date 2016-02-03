@@ -1,0 +1,17 @@
+{
+  "name": "contactwee",
+  "version": "1.0.0",
+  "description": "This is used to maintain your contacts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Praveen JP",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "mongojs": "^2.3.0"
+  }
+}

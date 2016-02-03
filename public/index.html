@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="contactwee">
+<head>
+	<title>ContactWee</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="Shortcut Icon" href="assets/img/jp.ico" />
+	<link rel="icon" type="image/png" href="assets/img/jp.ico">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Custom Style -->
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+	<!-- Animation -->
+	<link rel="stylesheet" type="text/css" href="/assets/css/animate.css">	
+
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300italic,300,600,700,700italic' rel='stylesheet' type='text/css'>
+
+	<!-- Icons -->
+	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+</head>
+<body ng-controller="contactCtrl">
+	<div class="container">
+		<div class="well custom-well">
+			<h2 align="center" class="animated rubberBand">Contact Wee</h2>
+			<table class="table table-bordered animated bounceInUp">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Phone No</th>
+						<th>Skype Id</th>
+						<th>Whatsapp No</th>
+						<th>Address</th>
+						<th>Current Place</th>
+						<th class="col col-xs-2">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<form ng-submit="addContact()">
+			          <td><input type="text" class="form-control" ng-model="contact.name" required></td>
+			          <td><input type="email" class="form-control" ng-model="contact.email" required></td>
+			          <td><input type="number" class="form-control" ng-model="contact.phoneno" required></td>
+			          <td><input type="email" class="form-control" ng-model="contact.skype" required></td>
+			          <td><input type="number" class="form-control" ng-model="contact.whatsapp" required></td>
+			          <td><input type="text" class="form-control" ng-model="contact.address" required></td>
+			          <td><input type="text" class="form-control" ng-model="contact.place" required></td>
+			          <td><button id="add" type="submit" class="btn btn-primary" alt="Add Contact"><i class="icon ion-plus"></i></button>
+			        </form>
+			        &nbsp;&nbsp;<button id="update" class="btn btn-info" alt="Update Contact" ng-click="update()"><i class="icon ion-checkmark"></i></button>&nbsp;&nbsp;<button alt="Refresh Contact" class="btn btn-success" ng-click="refresh()"><i class="icon ion-loop"></i></button></td>
+		        </tr>
+					<tr ng-repeat="contact in contactwee">
+						<td>{{contact.name}}</td>
+          				<td>{{contact.email}}</td>
+          				<td>{{contact.phoneno}}</td>
+          				<td>{{contact.skype}}</td>
+          				<td>{{contact.whatsapp}}</td>
+          				<td>{{contact.address}}</td>
+          				<td>{{contact.place}}</td>
+          				<td><button class="btn btn-warning" ng-click="edit(contact._id)"><i class="icon ion-edit"></i> Edit</button>&nbsp;&nbsp;<button class="btn btn-danger" ng-click="remove(contact._id)"><i class="icon ion-trash-a"></i> Delete</button></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="norecord animated shake" ng-if="contactwee.length == 0">There is no Contacts</div>
+		</div>
+		<div class="well">
+			<div align="center" class="info">
+				<p><b>Developer by Praveen JP (<a target="_blank" href="https://www.facebook.com/JPCreationJPR">JP Creation</a>)</b></p>
+			</div>
+			<div class="social">
+				<a target="_blank" href="https://www.facebook.com/RoadizPraveen"><i class="icon ion-social-facebook"></i></a>
+				<a target="_blank" href="https://twitter.com/roadizpraveen"><i class="icon ion-social-twitter"></i></a>
+				<a target="_blank" href="https://in.linkedin.com/in/roadizpraveen"><i class="icon ion-social-linkedin"></i></a>
+				<a target="_blank" href="https://plus.google.com/+RoadizPraveen"><i class="icon ion-social-googleplus"></i></a>
+				<a target="_blank" href="http://jpcreation4u.blogspot.in/"><i class="icon ion-social-rss"></i></a>
+				<a target="_blank" href="http://jpcreation.webs.com/"><i class="icon ion-ios-world"></i></a>
+				<a target="_blank" href="https://www.youtube.com/user/praveen2602"><i class="icon ion-social-youtube"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+	<script type="text/javascript" src="controller/app.js"></script>
+</body>
+</html>

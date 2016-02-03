@@ -1,0 +1,63 @@
+@media only screen and(max-device-width: 768px){
+	.info{
+		width: 100% !important;
+		text-align: center !important;
+	}
+	.social{
+		float: none !important;
+		text-align: center !important;
+		width: 100%;
+		margin: 0px
+	}
+}
+
+body{
+	background :url('../img/pattern.jpg') repeat;
+	margin:20px;
+}
+
+h1,h2,h3,h4,h5{
+	font-family: 'Bree Serif', serif;
+	font-weight: 200;	
+}
+
+p{
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+}
+
+input{
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+}
+
+th, td{
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+}
+
+.custom-well{
+	min-height:550px;
+	box-shadow: 0px 0px 8px 0px #888888;	
+}
+.norecord{
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+}
+.info{
+	width: 70%;
+}
+.info p{
+	margin-left: 34%;
+}
+.social{
+	width: 25%;
+	float:right;
+	margin-top: -33px;
+    font-size: 28px;
+}
+.social a{
+	margin-left: 10px;
+}
