@@ -1,7 +1,7 @@
 var express    = require('express');
 var app 	   = express();
 var mongoJS    = require('mongojs');
-var db         = mongoJS('contactwee',['contactwee']);
+var db         = mongoJS('mongodb://jpmean:123123@ds055495.mongolab.com:55495/contactwee',['contactwee']);
 var bodyparser = require('body-parser');
 
 app.use(express.static(__dirname + '/public'));
