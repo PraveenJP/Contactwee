@@ -44,5 +44,10 @@ app.put('/contact/:id', function(req,res){
 	});
 });
 
-app.listen(3000);
-console.log('Server Running!');
+app.listen(process.env.PORT || 3000, function(err) {
+	if(err) {
+		console.log(err);
+	} else {
+		console.log("Server Running");
+	}
+});
