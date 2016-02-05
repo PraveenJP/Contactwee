@@ -55,9 +55,9 @@
 			          <td><input type="number" class="form-control" ng-model="contact.whatsapp" required></td>
 			          <td><input type="text" class="form-control" ng-model="contact.address" required></td>
 			          <td><input type="text" class="form-control" ng-model="contact.place" required></td>
-			          <td  class="col col-md-3"><button id="add" type="submit" class="btn btn-primary" alt="Add Contact"><i class="icon ion-plus"></i> Add</button>
+			          <td  class="col col-md-3"><button id="add" type="submit" class="btn btn-primary" alt="Add Contact"><img ng-show="addloader" class="loader" src="assets/img/loader.gif" /><i ng-show="addicon" class="icon ion-plus"></i> Add</button>
 			        </form>
-			        &nbsp;&nbsp;<button id="update" class="btn btn-info" alt="Update Contact" ng-click="update()"><i class="icon ion-checkmark"></i> Update</button>&nbsp;&nbsp;<button alt="Refresh Contact" class="btn btn-success" ng-click="refresh()"><i class="icon ion-loop"></i> Refresh</button></td>
+			        &nbsp;&nbsp;<button id="update" class="btn btn-info" alt="Update Contact" ng-click="update()"><img ng-show="editloader" class="loader" src="assets/img/loader.gif" /><i ng-show="editicon" class="icon ion-checkmark"></i> Update</button>&nbsp;&nbsp;<button alt="Refresh Contact" class="btn btn-success" ng-click="refresh()"><i class="icon ion-loop"></i> Refresh</button></td>
 		        </tr>
 					<tr ng-repeat="contact in contactwee">
 						<td>{{contact.name}}</td>
@@ -67,7 +67,7 @@
           				<td>{{contact.whatsapp}}</td>
           				<td>{{contact.address}}</td>
           				<td>{{contact.place}}</td>
-          				<td><button class="btn btn-warning" ng-click="edit(contact._id)"><i class="icon ion-edit"></i> Edit</button>&nbsp;&nbsp;<button class="btn btn-danger" ng-click="remove(contact._id)"><i class="icon ion-trash-a"></i> Delete</button></td>
+          				<td><button class="btn btn-warning" ng-click="edit(contact._id)"><i class="icon ion-edit"></i> Edit</button>&nbsp;&nbsp;<button id="delete" class="btn btn-danger" ng-click="remove(contact._id)"><img ng-show="delloader" class="loader" src="assets/img/loader.gif" /><i ng-show="delicon" class="icon ion-trash-a"></i> Delete</button></td>
 					</tr>
 				</tbody>
 			</table>

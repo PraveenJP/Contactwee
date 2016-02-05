@@ -39,3 +39,7 @@ th, td{
 .social a{
 	margin-left: 5px;
 }
+
+.loader{
+	width: 20px;
+}
