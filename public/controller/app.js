@@ -3,11 +3,9 @@ var app = angular.module('contactwee',[]);
 app.controller('contactCtrl',['$scope','$http',function($scope,$http){
 
 	$scope.addloader = false;
-	$scope.editloader = false;
-	$scope.delloader = false;
+	$scope.editloader = false;	
 	$scope.addicon = true;
-	$scope.editicon = true;
-	$scope.delicon = true;
+	$scope.editicon = true;	
 	document.getElementById('update').disabled = true;
 
 	$scope.refresh = function() {
@@ -23,7 +21,7 @@ app.controller('contactCtrl',['$scope','$http',function($scope,$http){
 	$scope.refresh();
 
 	$scope.addContact = function(){		
-		console.log($scope.contact);
+		//console.log($scope.contact);
 		if($scope.contactwee.length >= 10){
 			alert('Limited Contacts Only! Sorry *');
 		}else if($scope.contact != "" ){
@@ -44,12 +42,8 @@ app.controller('contactCtrl',['$scope','$http',function($scope,$http){
 
 	$scope.remove = function(id){
 		document.getElementById('delete').disabled = true;
-		$scope.delicon = false;
-		$scope.delloader = true;
 		$http.delete('/contact/' + id).success(function(resposne){
 			$scope.refresh();
-			$scope.delloader = false;
-			$scope.delicon = true;
 			document.getElementById('delete').disabled = false;
 		});
 	}

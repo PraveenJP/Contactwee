@@ -48,7 +48,7 @@
 				<tbody>
 				<tr>
 					<form ng-submit="addContact()">
-			          <td><input type="text" class="form-control" ng-model="contact.name" required></td>
+			          <td  class="col col-md-2"><input type="text" class="form-control" ng-model="contact.name" required></td>
 			          <td><input type="email" class="form-control" ng-model="contact.email" required></td>
 			          <td><input type="number" class="form-control" ng-model="contact.phoneno" required></td>
 			          <td><input type="email" class="form-control" ng-model="contact.skype" required></td>
@@ -67,7 +67,7 @@
           				<td>{{contact.whatsapp}}</td>
           				<td>{{contact.address}}</td>
           				<td>{{contact.place}}</td>
-          				<td><button class="btn btn-warning" ng-click="edit(contact._id)"><i class="icon ion-edit"></i> Edit</button>&nbsp;&nbsp;<button id="delete" class="btn btn-danger" ng-click="remove(contact._id)"><img ng-show="delloader" class="loader" src="assets/img/loader.gif" /><i ng-show="delicon" class="icon ion-trash-a"></i> Delete</button></td>
+          				<td><button class="btn btn-warning" ng-click="edit(contact._id)"><i class="icon ion-edit"></i> Edit</button>&nbsp;&nbsp;<button id="delete" class="btn btn-danger" ng-click="remove(contact._id)"><i class="icon ion-trash-a"></i> Delete</button></td>
 					</tr>
 				</tbody>
 			</table>
