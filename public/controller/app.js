@@ -21,7 +21,7 @@ app.controller('contactCtrl',['$scope','$http',function($scope,$http){
 	$scope.refresh();
 
 	$scope.addContact = function(){		
-		//console.log($scope.contact);
+		console.log($scope.contact);
 		if($scope.contactwee.length >= 10){
 			alert('Limited Contacts Only! Sorry *');
 		}else if($scope.contact != "" ){
