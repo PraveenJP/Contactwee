@@ -17,8 +17,8 @@ jobs:
     - name: Build and push
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:push -a contactwee web 
-    - name: Release
-      env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:release -a contactwee web 
+      with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "contactwee" #Must be unique in Heroku
+          heroku_email: "roadizpraveen@gmail.com"
+          buildpack: "https://github.com/PraveenJP/Contactwee.git"
