@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v1
       with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "contactwee" #Must be unique in Heroku
+          heroku_app_name: "contactwee"
           heroku_email: "roadizpraveen@gmail.com"
           buildpack: "https://github.com/PraveenJP/Contactwee.git"
           procfile: "web: npm start"

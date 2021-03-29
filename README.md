@@ -1,6 +1,8 @@
 Contactwee
 ==========================
 
+![Action workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+
 ## This is my first MEAN Stack app. Happy.. :)
 
 Live URL: http://contactwee.herokuapp.com/
