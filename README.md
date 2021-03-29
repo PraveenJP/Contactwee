@@ -1,7 +1,7 @@
 Contactwee
 ==========================
 
-![Action workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![Action workflow](https://github.com/PraveenJP/ContactWee/actions/workflows/main.yml/badge.svg)
 
 ## This is my first MEAN Stack app. Happy.. :)
 
